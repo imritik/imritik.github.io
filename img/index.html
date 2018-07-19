@@ -1,0 +1,950 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Set mY test</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicons -->
+    <link href="img/favicon.png" rel="icon">
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" rel="stylesheet">
+
+    <!-- Bootstrap CSS File -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Libraries CSS Files -->
+    <link href="lib/nivo-slider/css/nivo-slider.css" rel="stylesheet">
+    <link href="lib/owlcarousel/owl.carousel.css" rel="stylesheet">
+    <link href="lib/owlcarousel/owl.transitions.css" rel="stylesheet">
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/venobox/venobox.css" rel="stylesheet">
+
+    <!-- Nivo Slider Theme -->
+    <link href="css/nivo-slider-theme.css" rel="stylesheet">
+
+    <!-- Main Stylesheet File -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Responsive Stylesheet File -->
+    <link href="css/responsive.css" rel="stylesheet">
+
+
+
+    <style>
+        @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css);
+        .fa {
+            width: 60px;
+            background-color: transparent;
+            text-align: center;
+            color: #00C2D7;
+            font: bold 65px 'FontAwesome';
+            line-height: 60px;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .fa-angle-down:before {
+            content: "\f107";
+        }
+        
+        .bounce {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            width: 60px;
+            height: 60px;
+            margin-left: -30px;
+            /* border: 2px solid #00C2D7; */
+            /* -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            border-radius: 50%; */
+            animation: bounce 4s infinite;
+            -webkit-animation: bounce 4s infinite;
+            -moz-animation: bounce 4s infinite;
+            -o-animation: bounce 4s infinite;
+        }
+        
+        @-webkit-keyframes bounce {
+            0% {}
+            50% {
+                transform: translateY(70px);
+            }
+            65% {}
+            75% {}
+            100% {}
+        }
+        
+        @-moz-keyframes bounce {
+            0% {}
+            50% {
+                transform: translateY(70px);
+                color: gray;
+            }
+            65% {}
+            75% {}
+            100% {}
+        }
+        
+        @-o-keyframes bounce {
+            0% {}
+            50% {
+                transform: translateY(70px);
+            }
+            65% {}
+            75% {}
+            100% {}
+        }
+        
+        @keyframes bounce {
+            0% {}
+            50% {
+                transform: translateY(70px);
+            }
+            65% {}
+            75% {}
+            100% {}
+        }
+        
+        #team-img {
+            position: relative;
+            margin: 0;
+            width: 100%;
+            height: 250px;
+            z-index: 1;
+        }
+        
+        #f1_card {
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: all 1.0s linear;
+        }
+        
+        #team-img:hover #f1_card {
+            transform: rotateY(180deg);
+            box-shadow: -5px 5px 5px #aaa;
+        }
+        
+        .face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+        
+        .front {
+            box-shadow: -5px 5px 5px #aaa;
+        }
+        
+        .face.back {
+            display: block;
+            transform: rotateY(180deg);
+            box-sizing: border-box;
+            padding: 10px;
+            color: white;
+            text-align: center;
+            background-color: white;
+        }
+        
+        .nivo-controlNav {
+            display: none;
+        }
+        
+        .single-team-member {
+            border: none;
+        }
+        
+        .single-blog {
+            display: none;
+        }
+        
+        .team-top {
+            background-color: #F9F8F8;
+        }
+        
+        .work-left-text img {
+            height: 340px;
+            width: 650px;
+        }
+        /* HOVER ON TEACHERS */
+        
+        .hovereffect {
+            width: 100%;
+            height: 100%;
+            float: left;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+            cursor: default;
+        }
+        
+        .hovereffect .overlay {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+            background-color: rgba(75, 75, 75, 0.7);
+            -webkit-transition: all 0.4s cubic-bezier(0.88, -0.99, 0, 1.81);
+            transition: all 0.4s cubic-bezier(0.88, -0.99, 0, 1.81);
+        }
+        
+        .hovereffect:hover .overlay {
+            background-color: rgba(48, 152, 157, 0.4);
+        }
+        
+        .hovereffect img {
+            display: block;
+            position: relative;
+        }
+        
+        .hovereffect h2 {
+            text-transform: uppercase;
+            color: #fff;
+            text-align: center;
+            position: relative;
+            font-size: 17px;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.6);
+            -webkit-transform: translateY(45px);
+            -ms-transform: translateY(45px);
+            transform: translateY(45px);
+            -webkit-transition: all 0.4s cubic-bezier(0.88, -0.99, 0, 1.81);
+            transition: all 0.4s cubic-bezier(0.88, -0.99, 0, 1.81);
+        }
+        
+        .hovereffect:hover h2 {
+            -webkit-transform: translateY(5px);
+            -ms-transform: translateY(5px);
+            transform: translateY(5px);
+        }
+        
+        .hovereffect a.info {
+            display: inline-block;
+            text-decoration: none;
+            padding: 7px 14px;
+            text-transform: uppercase;
+            color: #fff;
+            border: 1px solid #fff;
+            background-color: transparent;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            -webkit-transform: scale(0);
+            -ms-transform: scale(0);
+            transform: scale(0);
+            -webkit-transition: all 0.4s cubic-bezier(0.88, -0.99, 0, 1.81);
+            transition: all 0.8s cubic-bezier(0.88, -0.99, 0, 1.81);
+            font-weight: normal;
+            margin: -52px 0 0 0;
+            padding: 62px 100px;
+        }
+        
+        .hovereffect:hover a.info {
+            opacity: 1;
+            filter: alpha(opacity=100);
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+        }
+        
+        .hovereffect a.info:hover {
+            box-shadow: 0 0 5px #fff;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target="#navbar-example">
+
+    <div id="preloader"></div>
+
+    <header>
+        <!-- header-area start -->
+        <div id="sticker" class="header-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+
+                        <!-- Navigation -->
+                        <nav class="navbar navbar-default">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".bs-example-navbar-collapse-1" aria-expanded="false">
+										<span class="sr-only">Toggle navigation</span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+									</button>
+                                <!-- Brand -->
+                                <a class="navbar-brand page-scroll sticky-logo" href="index.html">
+                                    <h1><span>set</span>My Test</h1>
+
+                                </a>
+                            </div>
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse main-menu bs-example-navbar-collapse-1" id="navbar-example">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li class="active">
+                                        <a class="page-scroll" href="#home">Home</a>
+                                    </li>
+                                    <li>
+                                        <a class="page-scroll" href="#about">About</a>
+                                    </li>
+                                    <li>
+                                        <a class="page-scroll" href="#services">Samples</a>
+                                    </li>
+                                    <li>
+                                        <a class="page-scroll" href="#team">Q-Bank</a>
+                                    </li>
+
+                                    <li>
+                                        <a class="page-scroll" href="#blog">Help</a>
+                                    </li>
+                                    <li>
+                                        <a class="page-scroll" href="#contact">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- navbar-collapse -->
+                        </nav>
+                        <!-- END: Navigation -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- header-area end -->
+    </header>
+    <!-- header end -->
+
+    <!-- Start Slider Area -->
+    <div id="home" class="slider-area">
+        <div class="bend niceties preview-2">
+            <div id="ensign-nivoslider" class="slides">
+                <img src="https://lh3.googleusercontent.com/h9y9k3_prjCiJwcDoFTD5o1VNDsMNiJABKRvYmTpJU8OSI1s05_C82fPRJSZSMazQb9v" alt="" title="#slider-direction-1" />
+                <img src="https://lh3.googleusercontent.com/h9y9k3_prjCiJwcDoFTD5o1VNDsMNiJABKRvYmTpJU8OSI1s05_C82fPRJSZSMazQb9v" alt="" title="#slider-direction-1" alt="" title="#slider-direction-2" />
+
+            </div>
+
+            <!-- direction 1 -->
+            <div id="slider-direction-1" class="slider-direction slider-one">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="slider-content">
+                                <!-- layer 1 -->
+                                <div class="layer-1-1 hidden-xs wow slideInDown" data-wow-duration="2s" data-wow-delay=".2s">
+                                    <h2 class="title1">Access More Than 35,000 Questions</h2>
+                                </div>
+                                <!-- layer 2 -->
+                                <div class="layer-1-2 wow slideInUp" data-wow-duration="2s" data-wow-delay=".1s">
+                                    <h1 class="title2">Get The Test You Want, In 2 Minutes On Your Phone</h1>
+                                </div>
+                                <!-- layer 3 -->
+                                <div class="layer-1-3 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
+                                    <a class="ready-btn right-btn page-scroll" href="#services">See Samples</a>
+                                    <a class="ready-btn page-scroll" href="#about">Learn More</a><br>
+
+                                </div>
+                                <div class="bounce">
+                                    <a class="page-scroll" href="#about"><i class="fa fa-angle-down fa-5x"></i></a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- direction 2 -->
+            <div id="slider-direction-2" class="slider-direction slider-two">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="slider-content text-center">
+                                <!-- layer 1 -->
+                                <div class="layer-1-1 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
+                                    <h2 class="title1">Access More Than 35,000 Questions</h2>
+                                </div>
+                                <!-- layer 2 -->
+                                <div class="layer-1-2 wow slideInUp" data-wow-duration="2s" data-wow-delay=".1s">
+                                    <h1 class="title2">Get The Test You Want, In 2 Minutes On Your Phone</h1>
+                                </div>
+                                <!-- layer 3 -->
+                                <div class="layer-1-3 hidden-xs wow slideInUp" data-wow-duration="2s" data-wow-delay=".2s">
+                                    <a class="ready-btn right-btn page-scroll" href="#services">See Samples</a>
+                                    <a class="ready-btn page-scroll" href="#about">Learn More</a>
+                                </div>
+                                <div class="bounce">
+                                    <a href="#about"><i class="fa fa-angle-down fa-5x"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Start About area -->
+            <div id="about" class="about-area area-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="section-headline text-center">
+                                <h2 data-sr="ease-in wait 0.85s">About set-My-Test</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- single-well start-->
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="well-left">
+                                <div class="single-well">
+                                    <a href="#">
+                                        <img src="https://i.ytimg.com/vi/jofjI6-kFBs/hqdefault.jpg" alt="" style="height: fit-content">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- single-well end-->
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="well-middle">
+                                <div class="single-well" style="font-weight: bold">
+                                    <a href="#">
+                                        <h4 class="sec-head">project Maintenance</h4>
+                                    </a>
+                                    <p>
+                                        Don't spend hours putting together your perfect test! With SetMyTest, you can - choose only questions you like, add them to your test right from your phone. What's more you get a beautifully formatted, ready to use test in in just a few minutes!
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            <i class="fa fa-check"></i>Respects your choices
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-check"></i>Cuts out chores
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-check"></i> Gives you freedom
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-check"></i>Saves you time
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End col-->
+                    </div>
+                </div>
+            </div>
+            <!-- End About area -->
+
+            <!-- Start Service area -->
+            <div id="services" class="services-area area-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="section-headline services-head text-center">
+                                <h2>What Teachers Are Doing On SetMyTest</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row text-center">
+                        <div class="services-contents">
+                            <!-- Start Left services -->
+
+                            <div class="col-md-4 col-sm-4 col-xs-12" style="margin-bottom: 15px;">
+                                <div class="hovereffect">
+                                    <img class="img-responsive" src="http://placehold.it/350x200" alt="">
+                                    <div class="overlay">
+                                        <h2>ENGLISH - pronouns</h2>
+                                        <a class="info" href="#">Get Questions</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12" style="margin-bottom: 15px;">
+                                <div class="hovereffect">
+                                    <img class="img-responsive" src="http://placehold.it/350x200" alt="">
+                                    <div class="overlay">
+                                        <h2>MATHS</h2>
+                                        <a class="info" href="#">Get Questions</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12" style="margin-bottom: 15px;">
+                                <div class="hovereffect">
+                                    <img class="img-responsive" src="http://placehold.it/350x200" alt="">
+                                    <div class="overlay">
+                                        <h2>SCIENCE</h2>
+                                        <a class="info" href="#">Get Questions</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Service area -->
+
+
+
+
+
+            <!-- Start Wellcome Area -->
+            <div class="wellcome-area">
+                <div class="well-bg">
+                    <div class="test-overly"></div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="wellcome-text">
+                                    <div class="well-text text-center">
+                                        <h2 id="dynamic" style="display: none;">Signup For Your Free Beta Trial Today!</h2>
+                                        <p>
+                                            Welcome To setMyTest
+                                        </p>
+                                        <div class="subs-feilds">
+                                            <div class="suscribe-input">
+                                                <input type="email" class="email form-control width-80" id="sus_email" placeholder="Email">
+                                                <button type="submit" id="sus_submit" style="display: none" class="add-btn width-20">Get the App</button>
+                                                <div id="msg_Submit" class="h3 text-center hidden"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Wellcome Area -->
+
+            <!-- Start team Area -->
+            <div id="team" class="our-team-area area-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="section-headline text-center">
+                                <h2>What’s In The Question Bank</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="team-top">
+                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                <div class="single-team-member">
+                                    <div id="team-img">
+                                        <div id="f1_card" class="shadow">
+                                            <div class="front face">
+                                                <div style="margin: 80px auto">
+                                                    <p style="font-size: 20px;color: black;font-weight: bolder">Grade 1 to 10 </p>
+                                                    <p>Find questions of your grade</p>
+                                                </div>
+                                            </div>
+                                            <div class="back face center">
+                                                <p>This is nice for exposing more information about an image.</p>
+                                                <p>Any content can go here.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- End column -->
+                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                <div class="single-team-member">
+                                    <div id="team-img">
+                                        <div id="f1_card" class="shadow">
+                                            <div class="front face">
+                                                <div style="margin: 80px auto">
+                                                    <p style="font-size: 20px;color:black;font-weight: bolder">English,Maths & Science</p>
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                            <div class="back face center">
+                                                <p>This is nice for exposing more information about an image.</p>
+                                                <p>Any content can go here.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- End column -->
+                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                <div class="single-team-member">
+                                    <div id="team-img">
+                                        <div id="f1_card" class="shadow">
+                                            <div class="front face">
+                                                <div style="margin: 80px auto">
+                                                    <p style="font-size: 20px;color: black;font-weight: bolder">35,000 questions</p>
+                                                    <p>Submitted by teachers</p>
+                                                </div>
+                                            </div>
+                                            <div class="back face center">
+                                                <p>This is nice for exposing more information about an image.</p>
+                                                <p>Any content can go here.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- End column -->
+                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                <div class="single-team-member">
+                                    <div id="team-img">
+                                        <div id="f1_card" class="shadow">
+                                            <div class="front face">
+                                                <div style="margin: 80px auto">
+                                                    <p style="font-size: 20px;color: black;font-weight: bolder">For Commerce Core </p>
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                            <div class="back face center">
+                                                <p>This is nice for exposing more information about an image.</p>
+                                                <p>Any content can go here.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- End column -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Team Area -->
+
+            <!-- Start reviews Area -->
+            <div class="reviews-area hidden-xs">
+                <div class="work-left-text">
+                    <a href="#">
+                        <img src="https://yt3.ggpht.com/a-/AJLlDp30MX7Jo2rW60eMhZ9ADEIxxL7uSyfQoTwiKQ=s900-mo-c-c0xffffffff-rj-k-no" alt="">
+                    </a>
+                </div>
+                <div class="work-right-text text-center">
+
+                    <h5>Only Questions You Want, No compromise. Choose the questions that are right for your class</h5>
+                    <a href="#contact" class="ready-btn">Contact us</a>
+                </div>
+            </div>
+        </div>
+        <!-- End reviews Area -->
+
+
+        <!-- Start Blog Area -->
+        <div id="blog" class="blog-area">
+            <div class="blog-inner area-padding">
+                <div class="blog-overly"></div>
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="section-headline text-center">
+                                <h2>Set Your Test in 4 Simple Steps</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- Start Left Blog -->
+                        <div class="col-md-3 col-sm-3 col-xs-12">
+                            <div class="single-blog">
+                                <div class="single-blog-img">
+                                    <a href="#">
+                                        <i class="fa fa-download" style="color: gray" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <!-- Start single blog -->
+                        </div>
+                        <!-- End Left Blog-->
+                        <!-- Start Left Blog -->
+                        <div class="col-md-3 col-sm-3 col-xs-12">
+                            <div class="single-blog">
+                                <div class="single-blog-img">
+                                    <a href="#">
+                                        <i class="fa fa-search-plus" style="color: gray" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <!-- Start single blog -->
+                        </div>
+                        <!-- End Left Blog-->
+                        <!-- Start Right Blog-->
+                        <div class="col-md-3 col-sm-3 col-xs-12">
+                            <div class="single-blog">
+                                <div class="single-blog-img">
+                                    <a href="#">
+                                        <i class="fa fa-hand-o-up" style="color: gray;" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-12">
+                            <div class="single-blog">
+                                <div class="single-blog-img">
+                                    <a href="#">
+                                        <i class="fa fa-envelope" style="color: gray" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+                            <!-- Start single blog -->
+                        </div>
+                        <!-- End Right Blog-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Blog -->
+
+
+
+
+
+        <script>
+            //DYNAMIC LOADING OF FREE TRIAL DIV
+            $(window).scroll(function() {
+
+                if ($(this).scrollTop() > 1190) {
+                    $('#dynamic').show("slow").delay(3000);
+
+                    $('#sus_submit').show("slow").delay(6000);
+                }
+            });
+
+
+            // DYANAMIC LOADING OF BLOG
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 2500) {
+                    $('.single-blog').show("slow").delay(3000);
+                }
+            });
+        </script>
+
+
+
+
+
+        <!-- Start contact Area -->
+        <div id="contact" class="contact-area">
+            <div class="contact-inner area-padding">
+                <div class="contact-overly"></div>
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="section-headline text-center">
+                                <h2>Contact us</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="well well-sm">
+                                        <form class="form-horizontal" action="">
+
+                                            <legend class="text-center header">Drop your details here</legend>
+
+                                            <div class="form-group">
+                                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                                                <div class="col-md-8">
+                                                    <input id="fname" name="name" type="text" placeholder=" Name" class="form-control" required>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="form-group">
+                                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
+                                                <div class="col-md-8">
+                                                    <input id="email" name="email" type="email" placeholder="Email Address" class="form-control" required>
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="form-group">
+                                                <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
+                                                <div class="col-md-8">
+                                                    <textarea class="form-control" id="pac-input" name="address" placeholder="Enter your Address" rows="4"></textarea>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="col-md-12 text-center">
+                                                    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                                                </div>
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <style>
+                            .header {
+                                color: #36A0FF;
+                                font-size: 27px;
+                                padding: 10px;
+                            }
+                            
+                            .bigicon {
+                                font-size: 35px;
+                                color: #36A0FF;
+                            }
+                        </style>
+
+
+
+
+
+
+                        <!-- GOOGLE AUTO COMPLETE -->
+
+                        <script>
+                            function initAutocomplete() {
+                                var map = new google.maps.Map(document.getElementById('map'), {
+                                    center: {
+                                        lat: -33.8688,
+                                        lng: 151.2195
+                                    },
+                                    zoom: 13,
+                                    mapTypeId: 'roadmap'
+                                });
+
+                                // Create the search box and link it to the UI element.
+                                var input = document.getElementById('pac-input');
+                                var searchBox = new google.maps.places.SearchBox(input);
+                                map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+                                // Bias the SearchBox results towards current map's viewport.
+                                map.addListener('bounds_changed', function() {
+                                    searchBox.setBounds(map.getBounds());
+                                });
+
+                                var markers = [];
+                                // Listen for the event fired when the user selects a prediction and retrieve
+                                // more details for that place.
+                                searchBox.addListener('places_changed', function() {
+                                    var places = searchBox.getPlaces();
+
+                                    if (places.length == 0) {
+                                        return;
+                                    }
+
+                                    // Clear out the old markers.
+                                    markers.forEach(function(marker) {
+                                        marker.setMap(null);
+                                    });
+                                    markers = [];
+
+                                    // For each place, get the icon, name and location.
+                                    var bounds = new google.maps.LatLngBounds();
+                                    places.forEach(function(place) {
+                                        if (!place.geometry) {
+                                            console.log("Returned place contains no geometry");
+                                            return;
+                                        }
+                                        var icon = {
+                                            url: place.icon,
+                                            size: new google.maps.Size(71, 71),
+                                            origin: new google.maps.Point(0, 0),
+                                            anchor: new google.maps.Point(17, 34),
+                                            scaledSize: new google.maps.Size(25, 25)
+                                        };
+
+                                        // Create a marker for each place.
+                                        markers.push(new google.maps.Marker({
+                                            map: map,
+                                            icon: icon,
+                                            title: place.name,
+                                            position: place.geometry.location
+                                        }));
+
+                                        if (place.geometry.viewport) {
+                                            // Only geocodes have viewport.
+                                            bounds.union(place.geometry.viewport);
+                                        } else {
+                                            bounds.extend(place.geometry.location);
+                                        }
+                                    });
+                                    map.fitBounds(bounds);
+                                });
+                            }
+                        </script>
+
+
+
+                        <script async defer src="https://maps.googleapis.com/maps/api/js?key=myKEY&libraries=places&callback=initAutocomplete"></script>
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Contact Area -->
+
+        <footer>
+            <div class="footer-area-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="copyright text-center">
+                                <p>
+                                    &copy; Copyright <strong>set My Test</strong>. All Rights Reserved
+                                </p>
+                            </div>
+                            <div class="credits" style="color: gray">
+
+                                Designed by
+                                <a href="#"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"  style="background: white;font-size: 40px;width: 40px;height: 50px;"></i></a>
+
+        <!-- JavaScript Libraries -->
+        <script src="lib/jquery/jquery.min.js"></script>
+        <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/venobox/venobox.min.js"></script>
+        <script src="lib/knob/jquery.knob.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/parallax/parallax.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/nivo-slider/js/jquery.nivo.slider.js" type="text/javascript"></script>
+        <script src="lib/appear/jquery.appear.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8HeI8o-c1NppZA-92oYlXakhDPYR7XMY"></script>
+
+        <!-- Contact Form JavaScript File -->
+        <script src="contactform/contactform.js"></script>
+
+        <script src="js/main.js"></script>
+</body>
+
+</html>
